@@ -5,4 +5,3 @@
 #But not source file with postfix. which is everything but a folder
 !*.*.meta
 Library/metadata
-Library/metadata/fa/fa41734a337674542975482c8fe96ea1
