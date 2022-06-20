@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -10,7 +9,6 @@ public class RaceManager : MonoBehaviour
 {
     public bool RaceStarted;
     public float StartTime;
-    public Text countdownText;
 
     public GameObject FinishLine;
 
@@ -20,25 +18,26 @@ public class RaceManager : MonoBehaviour
     public ImportCarsCSV importCars;
     public List<GameObject> CarsRacing;
 
-    [SerializeField]
-    public int GameRuns = 1;
+    public int GameRuns = 10;
     public int currentRunNumber = 1;
     public float GameSpeed;
     [System.NonSerialized]
     public float TimerGameSpeed;
 
-    int carsFinished = 0;
-    bool RaceFinished;
+    public bool RaceFinished;
+
+    private Text Car1Text;
+    private Text Car2Text;
+    private Text Car3Text;
+    private Text Car4Text;
 
 
     void Start()
     {
         CarsRacing = importCars.carsList;
-        carsFinished = 0;
         StartPositions = GameObject.FindGameObjectsWithTag("StartPositionNode").ToList();
         RaceStarted = false;
         TimerGameSpeed = 1/GameSpeed;
-        countdownText.text = StartTime.ToString();
         StartCoroutine("StartRace",StartTime);
     }
 
@@ -66,12 +65,11 @@ public class RaceManager : MonoBehaviour
     {
         StreamWriter writer = new StreamWriter("Assets/Winner.txt", true);
         writer.Write(carName + '\n');
-        carsFinished++;
         writer.Close();
-        if(carsFinished == CarsRacing.Count())
-        {
-            RaceFinished = true;
-        }
+    }
+
+    public void FinishRace(){
+        RaceFinished = true;
     }
 
     IEnumerator StartRace(float delay){
@@ -79,11 +77,8 @@ public class RaceManager : MonoBehaviour
         {
             yield return new WaitForSeconds(1.0f * TimerGameSpeed);
             delay--;
-            countdownText.text = delay.ToString();
         }
         RaceStarted = true;
-        countdownText.text = "Go";
         yield return new WaitForSeconds(1.0f * TimerGameSpeed);
-        countdownText.text = string.Empty;
     }
-};
+}

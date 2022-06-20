@@ -6,6 +6,8 @@ using UnityEngine;
 public class Winner : MonoBehaviour
 {
     public RaceManager raceManager;
+    bool firstPlaceFinished = false;
+    int carsFinished;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +25,17 @@ public class Winner : MonoBehaviour
         {
             DragCar car = col.gameObject.GetComponent<DragCar>();
             car.raceFinished = true;
-            raceManager.RecordPosition(col.name);
+            carsFinished++;
+            if(!firstPlaceFinished){
+                raceManager.RecordPosition(col.name);
+                firstPlaceFinished = true;
+            }
+        }
+        if(carsFinished == raceManager.CarsRacing.Count)
+        {
+            firstPlaceFinished = false;
+            carsFinished = 0;
+            raceManager.FinishRace();
         }
     }
 }

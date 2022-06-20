@@ -3,12 +3,18 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ImportCarsCSV : MonoBehaviour
 {
     public List<GameObject> carsList;
     public string fileName;
     public int lineNumber;
+    // private Text Car1Text;
+    // private Text Car2Text;
+    // private Text Car3Text;
+    // private Text Car4Text;
+
 
     // Start is called before the first frame update
     public void Start()
@@ -40,7 +46,7 @@ public class ImportCarsCSV : MonoBehaviour
     {
         if (dataValues[0] != "Name")
         {
-            GameObject carObj = DragCar.Create(dataValues[0], Int32.Parse(dataValues[1]), float.Parse(dataValues[2]), lineNumber - 1);
+            GameObject carObj = DragCar.Create(dataValues[0], float.Parse(dataValues[1]), float.Parse(dataValues[2]), lineNumber - 1);
             carsList.Add(carObj);
             lineNumber++;
         }

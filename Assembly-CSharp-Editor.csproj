@@ -53,6 +53,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Editor\CsvHandler.cs" />
+     <Compile Include="Assets\Editor\GameRunHandler.cs" />
+     <Compile Include="Assets\Editor\Stat.cs" />
      <Compile Include="Assets\Editor\WinRateEditor.cs" />
      <Compile Include="Assets\ExternalAssets\BOXOPHOBIC\Utils\Scripts\BoxophobicUtils\Editor\GetBoxophobicFolder.cs" />
      <Compile Include="Assets\ExternalAssets\BOXOPHOBIC\Utils\Scripts\Constants\Editor\Constants.cs" />
@@ -78,6 +81,9 @@
      <Compile Include="Assets\ExternalAssets\BOXOPHOBIC\Utils\Scripts\StyledMono\Editor\StyledMonoBehaviourEditor.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>C:/Users/Jordan/Unity Projects/DrivingRace/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.EditorCoroutines.Editor">
+ <HintPath>C:/Users/Jordan/Unity Projects/DrivingRace/Library/ScriptAssemblies/Unity.EditorCoroutines.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
  <HintPath>C:/Users/Jordan/Unity Projects/DrivingRace/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>

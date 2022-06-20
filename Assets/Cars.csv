@@ -1,5 +1,5 @@
 Name,TopSpeed,Acceleration
-SuperFastGreen,9,7
-SuperSlowBlue,4,1
-FastRed,6,7
-SlowYellow,4,3
+Green,60,4
+Blue,4,6
+Red,3.5,7
+Yellow,7,3

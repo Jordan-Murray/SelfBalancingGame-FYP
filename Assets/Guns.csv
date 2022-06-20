@@ -1,0 +1,6 @@
+Name,Damage,Fire Rate,Reload Time, Capacity
+Pistol,5,3,3,7
+AssultRife,7,6,5,8
+SubMachineGun,9,8,4,2
+Shotgun,10,3,8,4
+SniperRife,10,1,10,5

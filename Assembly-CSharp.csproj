@@ -70,12 +70,18 @@
      <Compile Include="Assets\Scripts\OutputWinsToText.cs" />
      <Compile Include="Assets\Scripts\RaceManager.cs" />
      <Compile Include="Assets\Scripts\Winner.cs" />
+     <None Include="Assets\WinnerGuns.txt" />
+     <None Include="Assets\PreviousWinRates.txt" />
+     <None Include="Assets\WinnerPatch1.txt" />
+     <None Include="Assets\Winner.txt" />
      <None Include="Assets\ExternalAssets\BrokenVector\LowPolyShaders\Shaders\LowPolyPBRShader.shader" />
      <None Include="Assets\ExternalAssets\BrokenVector\LowPolyShaders\Shaders\LowPolyUnlitShader.shader" />
      <None Include="Assets\ExternalAssets\BOXOPHOBIC\Skybox Cubemap Extended\Core\Shaders\Skybox Cubemap Extended.shader" />
-     <None Include="Assets\Winner.txt" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>C:/Users/Jordan/Unity Projects/DrivingRace/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.EditorCoroutines.Editor">
+ <HintPath>C:/Users/Jordan/Unity Projects/DrivingRace/Library/ScriptAssemblies/Unity.EditorCoroutines.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
  <HintPath>C:/Users/Jordan/Unity Projects/DrivingRace/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
